@@ -36,6 +36,13 @@
 
     --gold: 43 55% 55%;
     --gold-foreground: 40 20% 97.6%;
+    --gold-light: 43 45% 75%;
+
+    --warm: 25 30% 50%;
+    --warm-light: 25 25% 92%;
+    --burgundy: 350 40% 35%;
+    --sage: 150 15% 55%;
+    --cream: 40 30% 95%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -69,6 +76,12 @@
     --ring: 43 55% 55%;
     --gold: 43 55% 55%;
     --gold-foreground: 220 20% 8%;
+    --gold-light: 43 45% 35%;
+    --warm: 25 30% 50%;
+    --warm-light: 25 15% 15%;
+    --burgundy: 350 40% 45%;
+    --sage: 150 15% 40%;
+    --cream: 40 10% 12%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -97,4 +110,37 @@
   html {
     scroll-behavior: smooth;
   }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(43 55% 55%), hsl(43 45% 75%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-warm {
+    background: linear-gradient(180deg, hsl(40 20% 97.6%) 0%, hsl(40 30% 95%) 100%);
+  }
+
+  .bg-gradient-section {
+    background: linear-gradient(180deg, hsl(40 30% 95%) 0%, hsl(40 20% 97.6%) 100%);
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      110deg,
+      transparent 25%,
+      hsl(43 55% 55% / 0.1) 37%,
+      transparent 63%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
