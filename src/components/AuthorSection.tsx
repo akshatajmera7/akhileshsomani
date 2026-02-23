@@ -12,9 +12,8 @@ const AuthorSection = () => {
 
       <div
         ref={ref}
-        className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-        }`}
+        className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+          }`}
       >
         {/* Headshot placeholder */}
         <div className="flex justify-center">
@@ -33,15 +32,15 @@ const AuthorSection = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Akhilesh Somani</h2>
           <div className="w-12 h-[1.5px] bg-gradient-to-r from-gold to-gold-light mb-6" />
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Akhilesh Somani is an author, thinker, and lifelong learner whose work sits at the
-            intersection of philosophy, personal growth, and storytelling. With a deep reverence
-            for the timeless questions of human existence, he crafts narratives that invite
-            readers to look inward and outward with fresh eyes.
+            Akhilesh Somani is a founder, thinker, and student at <strong>BITS Pilani</strong>.
+            Whose work sits at the intersection of philosophy, personal growth, and storytelling.
+            With a deep reverence for the timeless questions of human existence, he crafts
+            narratives that invite readers to look inward and outward with fresh eyes.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <em className="font-serif">The 9 Wonders</em> is his debut work — a distillation of years of reflection,
-            conversation, and observation into nine principles that illuminate the path to a
-            more intentional and wonder-filled life.
+            <em className="font-serif">The 9 Wonders</em> is his debut work — a distillation
+            of years of reflection, conversation, and observation into nine principles that
+            illuminate the path to a more intentional and wonder-filled life.
           </p>
           <div className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border/60">
             <Quote size={18} className="text-gold mt-0.5 shrink-0" />
