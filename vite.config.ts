@@ -11,6 +11,7 @@ export default defineConfig(({ mode }: { mode: string }) => ({
       overlay: false,
     },
   },
+  assetsInclude: ["**/*.JPG", "**/*.jpeg"],
   plugins: [react()],
   resolve: {
     alias: {

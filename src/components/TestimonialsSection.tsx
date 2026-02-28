@@ -5,27 +5,33 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    quote: "A rare book that genuinely shifts the way you see the world. Each wonder is a doorway.",
-    author: "Priya Mehta",
-    title: "Reader & Educator",
+    quote: "The 9 Wonders is a simple yet thought-provoking book written in lucid language. It defines the path to success focusing on 9 different elements. A practical approach to handling life.",
+    author: "Ankita Hundekar",
+    title: "Verified Purchase",
     stars: 5,
   },
   {
-    quote: "Somani writes with the precision of a philosopher and the warmth of a storyteller. Extraordinary.",
-    author: "David Chen",
-    title: "Book Reviewer",
+    quote: "An absolutely amazing book. It's like having a wise mentor by your side, encouraging you every step of the way. I highly recommend it for anyone who wants to improve their life.",
+    author: "Jeetendra Prasad",
+    title: "Reader",
     stars: 5,
   },
   {
-    quote: "I found myself underlining nearly every page. This is a book you return to again and again.",
-    author: "Sarah Lindqvist",
-    title: "Literary Critic",
+    quote: "A transformative book that offers readers a roadmap to personal empowerment and fulfillment. Written with clarity, compassion, and wisdom.",
+    author: "Subha Padhi",
+    title: "Guide to Empowerment",
     stars: 5,
   },
   {
-    quote: "A masterful blend of ancient wisdom and modern insight. Essential reading for our times.",
-    author: "Ravi Kumar",
-    title: "Bestselling Author",
+    quote: "Great book with insightful words on how to manage money. It's a great journey for financial independence. Highly recommended.",
+    author: "Deeksha Tamboli",
+    title: "Verified Purchase",
+    stars: 5,
+  },
+  {
+    quote: "Author explains the 9 wonders for a successful life in simple language with gratitude. A very good read.",
+    author: "Anamika Deshmukh",
+    title: "Verified Purchase",
     stars: 5,
   },
 ];
@@ -50,9 +56,8 @@ const TestimonialsSection = () => {
 
       <div
         ref={ref}
-        className={`max-w-3xl mx-auto text-center relative z-10 transition-all duration-700 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
+        className={`max-w-3xl mx-auto text-center relative z-10 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
       >
         <p className="text-sm tracking-[0.25em] uppercase text-gold mb-3">What Readers Say</p>
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Testimonials</h2>
@@ -109,9 +114,8 @@ const TestimonialsSection = () => {
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-2 rounded-full transition-all duration-500 ${
-                i === current ? "bg-gold w-8" : "bg-border w-2 hover:bg-gold/40"
-              }`}
+              className={`h-2 rounded-full transition-all duration-500 ${i === current ? "bg-gold w-8" : "bg-border w-2 hover:bg-gold/40"
+                }`}
               aria-label={`Go to testimonial ${i + 1}`}
             />
           ))}

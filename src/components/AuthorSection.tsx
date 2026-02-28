@@ -32,20 +32,22 @@ const AuthorSection = () => {
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-6">Akhilesh Somani</h2>
           <div className="w-12 h-[1.5px] bg-gradient-to-r from-gold to-gold-light mb-6" />
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Akhilesh Somani is a founder, thinker, and student at <strong>BITS Pilani</strong>.
-            Whose work sits at the intersection of philosophy, personal growth, and storytelling.
-            With a deep reverence for the timeless questions of human existence, he crafts
-            narratives that invite readers to look inward and outward with fresh eyes.
+            Akhilesh Somani is an <strong>author, trainer, and speaker</strong>. In his work,
+            he shares transformative techniques that helped him achieve his own personal goals.
+            His mission is to assist <strong>100,000 people by 2028</strong> in achieving their goals
+            more quickly, easily, and intelligently, leading to financial independence, respect,
+            and a legacy of happiness.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-6">
-            <em className="font-serif">The 9 Wonders</em> is his debut work — a distillation
-            of years of reflection, conversation, and observation into nine principles that
-            illuminate the path to a more intentional and wonder-filled life.
+            Akhilesh has co-authored with international bestselling author <strong>Brian Tracy</strong> in
+            the book <em className="font-serif">"Secret To Wealth."</em> This series,
+            <em className="font-serif">The 9 Wonders</em>, is a distillation of practical guidance
+            and actionable strategies for personal and professional excellence.
           </p>
           <div className="flex items-start gap-3 p-4 bg-card rounded-lg border border-border/60">
             <Quote size={18} className="text-gold mt-0.5 shrink-0" />
             <p className="text-sm text-muted-foreground italic leading-relaxed">
-              "I believe that every person holds a spark of wonder — this book is an invitation to find and fan that flame."
+              "A roadmap for personal and professional excellence, empowering readers to unlock their potential, cultivate a success-oriented mindset, and embark on a fulfilling journey towards a purposeful life."
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Sparkles } from "lucide-react";
+import bookImage from "@/book image.jpeg";
 
 const HeroSection = () => {
   return (
@@ -21,56 +21,25 @@ const HeroSection = () => {
           <div className="relative group">
             {/* Glow behind book */}
             <div className="absolute -inset-6 bg-gradient-to-br from-gold/20 via-transparent to-burgundy/10 rounded-lg blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            
+
             {/* 3D Book effect */}
             <motion.div
               whileHover={{ scale: 1.03, rotateY: 5 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="relative w-64 h-96 md:w-72 md:h-[26rem] rounded-sm shadow-2xl overflow-hidden"
+              className="relative w-64 h-96 md:w-72 md:h-[28rem] rounded-sm shadow-2xl overflow-hidden bg-white flex items-center justify-center p-2"
               style={{ perspective: "1000px" }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground/90 to-foreground/75" />
+              <img
+                src={bookImage}
+                alt="The 9 Wonders Book Cover"
+                className="w-full h-full object-contain"
+              />
               {/* Spine highlight */}
-              <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-gold/30 to-transparent" />
+              <div className="absolute left-0 top-0 bottom-0 w-4 bg-gradient-to-r from-gold/10 to-transparent pointer-events-none" />
               {/* Top shine */}
-              <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white/10 to-transparent" />
-              
-              <div className="relative flex items-center justify-center h-full p-8">
-                <div className="text-center">
-                  <motion.p
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.8 }}
-                    className="text-primary-foreground/50 text-xs tracking-[0.3em] uppercase mb-4"
-                  >
-                    Akhilesh Somani
-                  </motion.p>
-                  <motion.h3
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 1 }}
-                    className="font-serif text-primary-foreground text-3xl font-bold leading-tight"
-                  >
-                    The 9<br />Wonders
-                  </motion.h3>
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
-                    transition={{ delay: 1.2, duration: 0.6 }}
-                    className="w-12 h-[1.5px] bg-gradient-to-r from-gold to-gold-light mx-auto mt-6"
-                  />
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 1.4 }}
-                    className="mt-4"
-                  >
-                    <Sparkles size={14} className="text-gold/60 mx-auto" />
-                  </motion.div>
-                </div>
-              </div>
+              <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
             </motion.div>
-            
+
             {/* Shadow/depth */}
             <div className="absolute -bottom-4 left-4 right-0 h-8 bg-foreground/10 blur-xl rounded-full" />
           </div>
@@ -104,8 +73,8 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed mx-auto md:mx-0"
           >
-            A transformative journey through nine timeless principles that shape
-            extraordinary lives. Discover what lies beyond the ordinary.
+            A transformative book series delving into the intricacies of personal development
+            and success. Practical guidance and actionable strategies to empower you to unlock your full potential.
           </motion.p>
 
           <motion.div
@@ -114,11 +83,13 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.9 }}
             className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
           >
-            <Button className="bg-gold text-gold-foreground hover:shadow-xl hover:shadow-gold/25 hover:scale-105 transition-all duration-300 px-8 py-6 text-base rounded-full font-sans font-medium tracking-wide">
-              Buy Now
-            </Button>
-            <Button variant="outline" className="border-foreground/20 text-foreground hover:border-gold hover:text-gold transition-all duration-300 px-8 py-6 text-base rounded-full font-sans font-medium tracking-wide">
-              Read Preview
+            <a href="https://www.amazon.in/9-WONDERS-AKHILESH-SOMANI/dp/9359897817" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-gold text-gold-foreground hover:shadow-xl hover:shadow-gold/25 hover:scale-105 transition-all duration-300 px-8 py-6 text-base rounded-full font-sans font-medium tracking-wide w-full sm:w-auto">
+                Buy Now
+              </Button>
+            </a>
+            <Button variant="outline" className="border-foreground/20 text-foreground hover:border-gold hover:text-gold transition-all duration-300 px-8 py-6 text-base rounded-full font-sans font-medium tracking-wide" onClick={() => window.open('https://www.amazon.in/9-WONDERS-AKHILESH-SOMANI/dp/9359897817#reader_B0CSZ5YWWX', '_blank')}>
+              Read Sample
             </Button>
           </motion.div>
         </div>

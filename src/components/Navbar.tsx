@@ -1,17 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { label: "The Book", href: "#book" },
-  { label: "About", href: "#about" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "The Book", href: "/#book" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Blog", href: "/#blog" },
+  { label: "About", href: "/#about" },
+  { label: "Testimonials", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -24,18 +28,17 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "backdrop-blur-xl bg-background/90 shadow-lg shadow-foreground/5 border-b border-gold/10"
-          : "backdrop-blur-md bg-background/60"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? "backdrop-blur-xl bg-background/90 shadow-lg shadow-foreground/5 border-b border-gold/10"
+        : "backdrop-blur-md bg-background/60"
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="font-serif text-xl font-semibold tracking-wide text-foreground group">
+        <Link to="/" className="font-serif text-xl font-semibold tracking-wide text-foreground group">
           <span className="inline-block transition-all duration-300 group-hover:text-gradient-gold">
             Akhilesh Somani
           </span>
-        </a>
+        </Link>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
@@ -46,13 +49,23 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
             >
-              <a
-                href={link.href}
-                className="relative text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-foreground group py-1"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-              </a>
+              {link.href.startsWith("/#") ? (
+                <a
+                  href={link.href}
+                  className="relative text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-foreground group py-1"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                </a>
+              ) : (
+                <Link
+                  to={link.href}
+                  className="relative text-sm font-medium text-muted-foreground transition-colors duration-300 hover:text-foreground group py-1"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-gold scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                </Link>
+              )}
             </motion.li>
           ))}
           <motion.li
@@ -108,13 +121,23 @@ const Navbar = () => {
                   transition={{ delay: i * 0.08 }}
                   className="w-full"
                 >
-                  <a
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block text-center text-lg font-medium text-muted-foreground py-3 transition-all duration-300 hover:text-gold hover:bg-gold/5"
-                  >
-                    {link.label}
-                  </a>
+                  {link.href.startsWith("/#") ? (
+                    <a
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-center text-lg font-medium text-muted-foreground py-3 transition-all duration-300 hover:text-gold hover:bg-gold/5"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className="block text-center text-lg font-medium text-muted-foreground py-3 transition-all duration-300 hover:text-gold hover:bg-gold/5"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </motion.li>
               ))}
               <motion.li
