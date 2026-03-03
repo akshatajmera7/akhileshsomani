@@ -17,6 +17,7 @@ import img3 from "@/3.jpg";
 import img4 from "@/4.JPG";
 import img5 from "@/5.jpg";
 import img6 from "@/6.JPG";
+import img7 from "@/7.jpeg";
 
 const galleryItems = [
     { img: img1, tag: "Academy", icon: Award, description: "With Sonu Sood & Sneh Desai" },
@@ -25,6 +26,7 @@ const galleryItems = [
     { img: img4, tag: "Wisdom", icon: Star, description: "With Deepak Chopra" },
     { img: img5, tag: "Strategy", icon: Users, description: "With Bhupenddra Singh Raathore" },
     { img: img6, tag: "Success", icon: Award, description: "With Suniel Shetty" },
+    { img: img7, tag: "Meeting", icon: Users, description: "With Kumar Vishwa" },
 ];
 
 const GalleryCarousel = () => {

@@ -1,6 +1,8 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Quote } from "lucide-react";
 
+import authorImg from "@/author.jpeg";
+
 const AuthorSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
@@ -15,13 +17,16 @@ const AuthorSection = () => {
         className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
           }`}
       >
-        {/* Headshot placeholder */}
+        {/* Headshot */}
         <div className="flex justify-center">
           <div className="relative group">
             <div className="absolute -inset-3 bg-gradient-to-br from-gold/20 via-transparent to-sage/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            <div className="relative w-72 h-80 md:w-80 md:h-96 bg-gradient-to-br from-muted to-muted/80 rounded-lg flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 shimmer" />
-              <span className="text-muted-foreground text-sm tracking-widest uppercase relative z-10">Author Photo</span>
+            <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-lg overflow-hidden border border-border/60">
+              <img
+                src={authorImg}
+                alt="Akhilesh Somani"
+                className="w-full h-full object-cover transition-all duration-700"
+              />
             </div>
           </div>
         </div>

@@ -9,6 +9,8 @@ import img3 from "@/3.jpg";
 import img4 from "@/4.JPG";
 import img5 from "@/5.jpg";
 import img6 from "@/6.JPG";
+import img7 from "@/7.jpeg";
+import authorImg from "@/author.jpeg";
 
 const galleryItems = [
     { img: img1, title: "Train The Trainer Certificate", description: "Certificate for train the trainer by Sonu Sood, Akhilesh Somani & Sneh Desai." },
@@ -17,6 +19,8 @@ const galleryItems = [
     { img: img4, title: "With Deepak Chopra", description: "World's greatest Indian American author Mr. Deepak Chopra & Akhilesh Somani." },
     { img: img5, title: "With Bhupenddra Singh Raathore", description: "Akhilesh Somani & Bhupenddra Singh Raathore." },
     { img: img6, title: "With Suniel Shetty", description: "Akhilesh Somani & Suniel Shetty, Indian actor, film producer, and entrepreneur." },
+    { img: img7, title: "With Kumar Vishwa", description: "Akhilesh Somani with Kumar Vishwa." },
+    { img: authorImg, title: "Akhilesh Somani", description: "Author Akhilesh Somani." },
 ];
 
 const GalleryItem = ({ item, index }: { item: typeof galleryItems[0]; index: number }) => {
