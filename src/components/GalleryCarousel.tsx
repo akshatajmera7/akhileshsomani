@@ -20,9 +20,6 @@ import img5 from "@/5.jpg";
 import img6 from "@/6.JPG";
 import img7 from "@/7.jpeg";
 import img8 from "@/8.png";
-import authorImg from "@/author.jpeg";
-import bookImg from "@/book image.jpeg";
-import newBookImg from "@/new book.png";
 
 const GOOGLE_FORM_URL = "https://forms.gle/EpbLTF72mWNv7rcD8";
 
@@ -90,27 +87,6 @@ const galleryData: CarouselCard[] = [
         title: "With Bhupenddra Singh Raathore",
         description: "Akhilesh Somani & Bhupenddra Singh Raathore (BSR) breakthrough session.",
         tag: "Breakthrough Summit"
-    },
-    {
-        id: "upcoming-wealth-code",
-        img: newBookImg,
-        title: "The Wealth Code (Upcoming Book)",
-        description: "21 Steps to Building a Wealth Mindset — Upcoming new book by Akhilesh Somani.",
-        tag: "Upcoming Soon"
-    },
-    {
-        id: "author-akhilesh",
-        img: authorImg,
-        title: "Akhilesh Somani",
-        description: "Author, Mind Trainer & Speaker Akhilesh Somani.",
-        tag: "Author Portrait"
-    },
-    {
-        id: "bestseller-9-wonders",
-        img: bookImg,
-        title: "The 9 Wonders (Bestseller)",
-        description: "The 9 Wonders of Mind — Practical guide by Akhilesh Somani.",
-        tag: "Bestseller Book"
     },
 ];
 
