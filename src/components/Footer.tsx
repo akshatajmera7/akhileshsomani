@@ -17,7 +17,18 @@ const Footer = () => {
 
         <div className="text-center">
           <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">Akhilesh Somani</h3>
-          <p className="text-sm text-muted-foreground mb-8">Author of <em className="font-serif">The 9 Wonders</em></p>
+          <p className="text-sm text-muted-foreground mb-4">Author of <em className="font-serif">The 9 Wonders</em></p>
+
+          <div className="mb-8">
+            <a
+              href="https://forms.gle/EpbLTF72mWNv7rcD8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-gold text-gold-foreground hover:bg-gold/90 font-medium text-xs uppercase tracking-wider transition-all duration-300 shadow-md shadow-gold/20 hover:scale-105"
+            >
+              <span>Connect Directly (Google Form)</span>
+            </a>
+          </div>
 
           <div className="flex justify-center flex-wrap gap-4 mb-8">
             {[
